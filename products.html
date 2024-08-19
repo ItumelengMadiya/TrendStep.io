@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendStep - Products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">TrendStep</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="track.html">Track Order</a>
+                </li>
+                <!-- Search Form -->
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 ml-3" action="search_results.html" method="get">
+                        <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Container -->
+    <div class="container mt-5">
+        <h1>Our Products</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/puma-women.jpg" class="card-img-top" alt="Sneaker 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Mayze OW Sneaker Women</h5>
+                        <p class="card-text">R1000.00</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Sneaker 1" data-price="1000" data-image="images/puma-women.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/running.jpg" class="card-img-top" alt="Sneaker 2">
+                    <div class="card-body">
+                        <h5 class="card-title">MagMax Nitro Running shoes Men</h5>
+                        <p class="card-text">R3699.00</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Sneaker 2" data-price="3699" data-image="images/running.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/sneakers.jpg" class="card-img-top" alt="Sneaker 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Puma-180 Sneaker</h5>
+                        <p class="card-text">R2199.00</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Sneaker 3" data-price="2199" data-image="images/sneakers.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/jordan.png" class="card-img-top" alt="Sneaker 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Jordan4RM</h5>
+                        <p class="card-text">R1699.95</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Sneaker 4" data-price="1699.95" data-image="images/jordan.png">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/slides.png" class="card-img-top" alt="Slide">
+                    <div class="card-body">
+                        <h5 class="card-title">Nike Calm Electric</h5>
+                        <p class="card-text">R1099.95</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Slide" data-price="1099.95" data-image="images/slides.png">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/heel.webp" class="card-img-top" alt="Heel">
+                    <div class="card-body">
+                        <h5 class="card-title">Ankle Strap Block Heel</h5>
+                        <p class="card-text">R120.00</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Heel" data-price="120.00" data-image="images/heel.webp">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Contact us: 071 531 2922 | tumi@gmail.com | R78 Klipgat, Mabopane, South Africa</p>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

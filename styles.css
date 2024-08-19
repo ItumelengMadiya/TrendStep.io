@@ -1,0 +1,209 @@
+/* Apply background image and styling to body */
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+.header {
+    background-color: #000; /* Black background */
+    color: white; /* Light text color */
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixed position to stick to the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure header is on top of other content */
+}
+
+/* Style the navbar */
+.navbar {
+    margin-bottom: 30px;
+    background-color: #000 !important; /* Ensure black background with high specificity */
+    color: white; /* Light text color */
+    position: fixed; /* Fixed position to stick to the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure navbar is on top of other content */
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: white !important; /* Light text color for links */
+}
+
+.navbar .nav-link:hover {
+    color: #ff6600 !important; /* Highlight color on hover */
+}
+
+/* Style the footer */
+.footer {
+    background-color: #333; /* Dark gray */
+    color: white; /* Light text color */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Relative position for natural flow */
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+}
+
+/* Style the container */
+.container {
+    margin-top: 80px; /* Ensure space for fixed navbar */
+    margin-bottom: 60px; /* Ensure space for footer */
+    background-color: rgba(255, 255, 255, 0.95); /* Less transparent */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style for headings */
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff6600;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Style the cards */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #ff6600;
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.card-text {
+    color: #555;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+/* Style primary buttons */
+.btn-primary {
+    background-color: #ff6600;
+    border: none;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 10px;
+    font-size: 1em;
+    color: white; /* Ensure text is visible */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.btn-primary:hover {
+    background-color: #cc5200;
+}
+
+/* Style the table */
+.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+/* Add icon to cart link */
+.nav-link.cart {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link.cart::before {
+    content: "\f07a"; /* Font Awesome cart icon code */
+    font-family: 'Font Awesome 5 Free'; /* Font Awesome */
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+/* Ensure Font Awesome is included */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Add spacing to prevent button overlap with footer */
+.container {
+    padding-bottom: 70px; /* Adjust as necessary for button and footer spacing */
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 10px; /* Adjust if necessary */
+    }
+    
+    .footer {
+        padding: 10px; /* Adjust if necessary */
+    }
+    
+    .card-img-top {
+        height: 180px; /* Further reduce image size if necessary */
+    }
+    
+    h1 {
+        font-size: 1.8em; /* Adjust as needed */
+    }
+    
+    h2 {
+        font-size: 1.1em; /* Adjust as needed */
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - TrendStep</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">TrendStep</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="track.html">Track Order</a>
+                </li>
+                <!-- Search Form -->
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 ml-3" action="search_results.html" method="get">
+                        <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Search Results</h1>
+
+        <!-- Display search query -->
+        <p><strong>Results for: </strong><span id="search-query"></span></p>
+
+        <!-- Example of search results -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/sneakers.jpg" class="card-img-top" alt="Sneaker XYZ">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneaker XYZ</h5>
+                        <p class="card-text">High-quality sneakers for everyday use.</p>
+                        <p class="card-text"><strong>Price: R899</strong></p>
+                        <a href="product_details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/sandal.webp" class="card-img-top" alt="Elegant Sandal">
+                    <div class="card-body">
+                        <h5 class="card-title">Elegant Sandal</h5>
+                        <p class="card-text">Perfect for summer outings and events.</p>
+                        <p class="card-text"><strong>Price: R499</strong></p>
+                        <a href="product_details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/slop.webp" class="card-img-top" alt="Slops">
+                    <div class="card-body">
+                        <h5 class="card-title">Slops</h5>
+                        <p class="card-text">Comfortable and stylish slops for casual wear.</p>
+                        <p class="card-text"><strong>Price: R49</strong></p>
+                        <a href="product_details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- No results message -->
+        <div id="no-results" class="d-none">
+            <p>No results found for your search query.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Contact us: 071 531 2922 | tumi@gmail.com | R78 Klipgat, Mabopane, South Africa</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Example JavaScript to display the search query
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get('query');
+        document.getElementById('search-query').textContent = query ? query : 'No search query provided';
+
+        // Example logic to show/hide results
+        const noResults = document.getElementById('no-results');
+        if (!query || query.length < 3) {
+            noResults.classList.remove('d-none');
+        }
+    </script>
+</body>
+</html>
