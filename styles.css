@@ -35,12 +35,22 @@ body {
 .navbar-toggler {
     border: none;
     outline: none;
-    background-color: transparent; /* Ensure background is transparent */
+    background-color: #ff6600; /* Make the button stand out with a vibrant color */
+    color: white; /* Ensure the icon is visible */
+    border-radius: 50%; /* Round shape */
+    width: 40px; /* Size of the button */
+    height: 40px; /* Size of the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Pointer cursor for better UX */
 }
 
 /* Navbar toggler icon */
 .navbar-toggler-icon {
     background-image: url('data:image/svg+xml,...'); /* Add your own SVG or Font Awesome icon here */
+    width: 24px; /* Size of the icon */
+    height: 24px; /* Size of the icon */
 }
 
 /* Style navbar links */
@@ -58,6 +68,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%; /* Ensure full width */
+    background-color: #333; /* Dark background for menu */
+    border-top: 1px solid #ff6600; /* Border to separate from header */
 }
 
 .navbar-collapse.show {
@@ -66,6 +78,15 @@ body {
 
 .navbar-collapse .nav-item {
     margin: 10px 0; /* Add margin for better spacing */
+}
+
+.navbar-collapse .nav-link {
+    color: white; /* Text color for links in menu */
+    font-size: 1.2em; /* Larger font size for readability */
+}
+
+.navbar-collapse .nav-link:hover {
+    color: #ff6600; /* Highlight color on hover */
 }
 
 /* Style the footer */
@@ -229,7 +250,7 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #000; /* Ensure background matches navbar */
+        background-color: #333; /* Ensure background matches navbar */
         width: 100%; /* Full width */
     }
     
