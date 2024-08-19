@@ -29,14 +29,27 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000; /* Ensure navbar is on top of other content */
+    padding: 10px; /* Add padding for better spacing */
 }
 
+/* Style navbar links */
 .navbar .navbar-brand, .navbar .nav-link {
     color: white !important; /* Light text color for links */
 }
 
 .navbar .nav-link:hover {
     color: #ff6600 !important; /* Highlight color on hover */
+}
+
+/* Style the collapsible menu */
+.navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-collapse .nav-item {
+    margin: 10px 0; /* Add margin for better spacing */
 }
 
 /* Style the footer */
@@ -161,6 +174,16 @@ h2 {
 
     .card-img-top {
         height: 200px;
+    }
+    
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-collapse .nav-item {
+        margin: 10px 0;
     }
 }
 
