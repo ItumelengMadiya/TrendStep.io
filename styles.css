@@ -22,7 +22,6 @@ body {
 
 /* Style the navbar */
 .navbar {
-    margin-bottom: 30px;
     background-color: #000 !important; /* Ensure black background with high specificity */
     color: white; /* Light text color */
     position: fixed; /* Fixed position to stick to the top */
@@ -30,6 +29,18 @@ body {
     top: 0;
     z-index: 1000; /* Ensure navbar is on top of other content */
     padding: 10px; /* Add padding for better spacing */
+}
+
+/* Navbar toggle button for mobile screens */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    background-color: transparent; /* Ensure background is transparent */
+}
+
+/* Navbar toggler icon */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); /* Add your own SVG or Font Awesome icon here */
 }
 
 /* Style navbar links */
@@ -46,6 +57,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%; /* Ensure full width */
+}
+
+.navbar-collapse.show {
+    display: flex; /* Ensure the collapsible menu is shown */
 }
 
 .navbar-collapse .nav-item {
@@ -162,31 +178,6 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for smaller screens */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.2em;
-    }
-
-    .card-img-top {
-        height: 200px;
-    }
-    
-    .navbar-collapse {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-collapse .nav-item {
-        margin: 10px 0;
-    }
-}
-
 /* Add icon to cart link */
 .nav-link.cart {
     display: flex;
@@ -208,10 +199,42 @@ h2 {
     padding-bottom: 70px; /* Adjust as necessary for button and footer spacing */
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px; /* Adjust padding if necessary */
+    }
+
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar-collapse .nav-item {
+        margin: 5px 0; /* Adjust margin for smaller screens */
+    }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
     .navbar {
         padding: 10px; /* Adjust if necessary */
+    }
+    
+    .navbar-toggler {
+        display: block; /* Ensure toggle button is visible */
+    }
+    
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000; /* Ensure background matches navbar */
+        width: 100%; /* Full width */
+    }
+    
+    .navbar-collapse .nav-item {
+        margin: 10px 0; /* Adjust margin for visibility */
     }
     
     .footer {
